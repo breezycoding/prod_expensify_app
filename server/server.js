@@ -10,6 +10,6 @@ app.get("*", (req, res) => {
     res.sendFile(path.join(public_path, "index.html"));
 });
 
-app.listen(port, ()=>{
+app.listen(process.env.PORT || 3000, ()=>{
     console.log("server is up!");
 });
